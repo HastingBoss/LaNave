@@ -1,3 +1,16 @@
+===================
+TO DO
+===================
+
+Revisar Nav Responsive
+Revisar dimensiones GLOBALES
+
+
+===================
+Portapapeles
+===================
+
+
 .navContainer-Mobile {
     position: relative;
     height: 56px;
