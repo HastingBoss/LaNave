@@ -1,0 +1,546 @@
+/* =========================
+   1. VARIABLES & RESET
+========================= */
+:root {
+    --primary-color: #652bdf;
+    /* Violeta Principal */
+    --primary-hover: #531eca;
+    --secondary-color: #31006F;
+    /* Violeta Oscuro */
+    --text-color: #2b2b2b;
+    --bg-color: #ffffff;
+    --bg-body: #fbfbfd;
+    --white: #ffffff;
+    --gray-light: #e7eaed;
+    --gray-text: #666666;
+    --font-main: "Inter", sans-serif;
+    --max-width: 1022px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-body);
+    color: var(--text-color);
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+
+/* =========================
+   2. HEADER / NAVBAR
+========================= */
+header {
+    background-color: var(--white);
+    width: 100%;
+    height: 82px;
+    border-bottom: 1px solid var(--gray-light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    background-color: var(--white);
+    height: 83px;
+    width: 100%;
+    border-bottom: 1px solid #e7eaed;
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    padding-left: 10px;
+}
+
+.logo img {
+    height: 32px;
+    width: auto;
+}
+
+/* Navbar Móvil */
+
+.navContainer-Mobile {
+    height: 56px;
+    display: none;
+    align-items: center;
+    background: #fff;
+    border-bottom: 1px solid #e7eaed;
+}
+
+.logoMobile {
+    display: none;
+}
+
+.logoMobile img {
+    height: 32px;
+}
+
+/* Ícono menú a la izquierda */
+.menu-icon {
+    display: none;
+    height: 40px;
+    width: 40px;
+}
+
+.menu-icon svg {
+    width: 100%;
+    height: 100%;
+    color: var(--text-color);
+}
+
+/* Enlaces (Centro) */
+.pillList {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin: 0 20px;
+}
+
+.pillItem a {
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pillItem a:hover {
+    color: var(--secondary-color);
+    background-color: #e4d7ff;
+}
+
+/* Grupo Derecho (Divisor + Botones) */
+.right-group {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-right: 20px;
+}
+
+.divisor {
+    width: 1px;
+    height: 24px;
+    background-color: #d1d1d1;
+    display: block;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Botones del Header */
+.btn-pill {
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-outline {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background-color: #f3eaff;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
+
+.btn-filled {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-filled:hover {
+    background-color: #f3eaff;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
+
+/* =========================
+   3. LAYOUT GENERAL & TEXTOS
+========================= */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.subtitle {
+    color: var(--gray-text);
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.spacer-small {
+    height: 40px;
+}
+
+.bottom-spacer {
+    height: 80px;
+}
+
+/* =========================
+   4. BOTONES GLOBALES
+========================= */
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color)
+}
+
+.btn-white {
+    background-color: var(--white);
+    color: var(--secondary-color);
+}
+
+.btn-white:hover {
+    background-color: black;
+    color: #f3eaff
+}
+
+/* =========================
+   5. CARDS DE BENEFICIOS
+========================= */
+.cards-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.card {
+    background: var(--white);
+    flex: 1;
+    min-width: 280px;
+    padding: 32px;
+    border-radius: 24px;
+    text-align: left;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.icon-box {
+    width: 48px;
+    height: 48px;
+    background: #f3eaff;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+}
+
+.card:hover .icon-box {
+    color: var(--secondary-color);
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.card p {
+    color: var(--gray-text);
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+/* =========================
+   6. BANNER STORIES
+========================= */
+.banner-stories {
+    background-color: var(--secondary-color);
+    border-radius: 24px;
+    padding: 40px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white);
+    text-align: left;
+}
+
+.banner-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.banner-text p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* =========================
+   7. MÉTODOS DE COBRO
+========================= */
+.metodos-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.metodo-card {
+    background: var(--white);
+    border-radius: 32px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    gap: 40px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+
+.metodo-info {
+    flex: 1;
+}
+
+.metodo-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.metodo-info p {
+    color: #444;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+.metodo-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.metodo-img img {
+    max-height: 300px;
+    width: auto;
+    transition: transform 0.4s ease;
+}
+
+.metodo-card:hover .metodo-img img {
+    transform: scale(1.05);
+}
+
+.metodo-card.reverse-layout {
+    flex-direction: row-reverse;
+}
+
+/* =========================
+   8. RESPONSIVE (MÓVIL)
+========================= */
+@media (max-width: 930px) {
+
+    /* Ocultar elementos complejos del menú en móvil */
+    .pillList,
+    .right-group {
+        display: none;
+    }
+
+    .logo img {
+        display: none;
+    }
+
+    .logoMobile {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .navContainer-Mobile {
+        display: flex;
+    }
+
+    .navContainer {
+        justify-content: center;
+        /* Centrar logo en móvil */
+    }
+
+    /* Ajustar Banner */
+    .banner-stories {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    /* Ajustar Cards de Métodos */
+    .metodo-card,
+    .metodo-card.reverse-layout {
+        flex-direction: column-reverse;
+        /* Imagen arriba, texto abajo */
+        text-align: center;
+        padding: 40px 24px;
+    }
+
+    .metodo-info {
+        text-align: center;
+    }
+
+    .btn-white {
+        width: 100%;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+
+    /* =========================
+   RESPONSIVE (mobile)
+========================= */
+    @media (max-width: 768px) {
+
+        .footer-columns {
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        .footer-brand {
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 480px) {
+
+        .footer-columns {
+            grid-template-columns: 1fr;
+        }
+
+        .footer-col h4 {
+            margin-top: 20px;
+        }
+    }
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    background: #fff;
+    padding: 60px 20px;
+    border-top: 1px solid #e7eaed;
+}
+
+.footer-container {
+    max-width: 1022px;
+    margin: 0 auto;
+}
+
+/* Logo */
+.footer-brand {
+    margin-bottom: 40px;
+}
+
+.footer-brand img {
+    width: 40px;
+}
+
+/* Columnas */
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer-col h4 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #2b2b2b;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col a {
+    font-size: 14px;
+    color: #555;
+    transition: color .2s ease;
+}
+
+.footer-col a:hover {
+    color: var(--primary-color);
+}
