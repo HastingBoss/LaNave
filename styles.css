@@ -1,5 +1,5 @@
 /* =========================
-   1. VARIABLES & RESET
+    1. VARIABLES & RESET
 ========================= */
 :root {
     --primary-color: #652bdf;
@@ -48,7 +48,7 @@ img {
 
 
 /* =========================
-   2. HEADER / NAVBAR
+    2. HEADER / NAVBAR
 ========================= */
 header {
     background-color: var(--white);
@@ -92,26 +92,38 @@ nav {
 /* Navbar Móvil */
 
 .navContainer-Mobile {
-    height: 56px;
+    /*     height: 56px;
     display: none;
     align-items: center;
+    background: #fff; */
+
+
     background: #fff;
-    border-bottom: 1px solid #e7eaed;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    min-height: 72px;
 }
 
 .logoMobile {
     display: none;
-}
-
-.logoMobile img {
-    height: 32px;
+    width: auto;
+    max-width: 150px;
+    max-height: 40px;
+    height: 100%;
 }
 
 /* Ícono menú a la izquierda */
 .menu-icon {
     display: none;
-    height: 40px;
+    position: absolute;
+    left: 24px;
     width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu-icon svg {
@@ -204,7 +216,7 @@ nav {
 }
 
 /* =========================
-   3. LAYOUT GENERAL & TEXTOS
+    3. LAYOUT GENERAL & TEXTOS
 ========================= */
 .container {
     max-width: var(--max-width);
@@ -236,7 +248,7 @@ nav {
 }
 
 /* =========================
-   4. BOTONES GLOBALES
+    4. BOTONES GLOBALES
 ========================= */
 .btn {
     display: inline-flex;
@@ -270,7 +282,7 @@ nav {
 }
 
 /* =========================
-   5. CARDS DE BENEFICIOS
+    5. CARDS DE BENEFICIOS
 ========================= */
 .cards-grid {
     display: flex;
@@ -324,7 +336,7 @@ nav {
 }
 
 /* =========================
-   6. BANNER STORIES
+    6. BANNER STORIES
 ========================= */
 .banner-stories {
     background-color: var(--secondary-color);
@@ -348,7 +360,7 @@ nav {
 }
 
 /* =========================
-   7. MÉTODOS DE COBRO
+    7. MÉTODOS DE COBRO
 ========================= */
 .metodos-grid {
     display: flex;
@@ -407,7 +419,7 @@ nav {
 }
 
 /* =========================
-   8. RESPONSIVE (MÓVIL)
+    8. RESPONSIVE (MÓVIL)
 ========================= */
 @media (max-width: 930px) {
 
@@ -468,7 +480,7 @@ nav {
 
 
     /* =========================
-   RESPONSIVE (mobile)
+    RESPONSIVE (mobile)
 ========================= */
     @media (max-width: 768px) {
 
@@ -495,7 +507,7 @@ nav {
 }
 
 /* =========================
-   FOOTER
+    FOOTER
 ========================= */
 .footer {
     background: #fff;

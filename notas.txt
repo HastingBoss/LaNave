@@ -2,7 +2,7 @@
 TO DO
 ===================
 
-Revisar Nav Responsive
+Preguntar Nav Responsive (flex-wrap: nowrap)
 Revisar dimensiones GLOBALES
 
 
